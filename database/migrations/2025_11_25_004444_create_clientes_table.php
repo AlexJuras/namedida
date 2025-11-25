@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('cpf', 14)->unique();
+            $table->string('telefone', 15);
+            $table->string('email')->unique();
+            $table->text('endereco');
+            $table->date('data_nascimento')->nullable();
+            $table->text('observacoes')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
