@@ -30,4 +30,9 @@ class Cliente extends Model
     // {
     //     return $this->hasMany(Aluguel::class);
     // }
+
+    public function pessoas()
+    {
+        return $this->hasMany(Pessoa::class);
+    }
 }
