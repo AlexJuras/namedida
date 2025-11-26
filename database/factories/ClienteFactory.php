@@ -17,6 +17,7 @@ class ClienteFactory extends Factory
     public function definition(): array
     {
         return [
+            'cliente_id' => \App\Models\Cliente::factory(),
             'nome' => $this->faker->name(),
             'cpf' => $this->faker->numerify('###.###.###-##'),
             'telefone' => $this->faker->phoneNumber(),

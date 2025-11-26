@@ -26,11 +26,6 @@ class Cliente extends Model
         'data_nascimento' => 'date',
     ];
 
-    // public function alugueis()
-    // {
-    //     return $this->hasMany(Aluguel::class);
-    // }
-
     public function pessoas()
     {
         return $this->hasMany(Pessoa::class);

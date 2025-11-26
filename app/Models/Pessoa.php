@@ -39,4 +39,9 @@ class Pessoa extends Model
     {
         return $this->belongsTo(Cliente::class);
     }
+
+    public function locacaos()
+    {
+        return $this->hasMany(Locacao::class);
+    }
 }
