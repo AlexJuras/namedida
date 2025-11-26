@@ -13,6 +13,10 @@ class PessoaForm
     {
         return $schema
             ->components([
+                Select::make('cliente_id')
+                    ->label('Cliente')
+                    ->relationship('cliente', 'nome')
+                    ->required(),
                 TextInput::make('nome')
                     ->required(),
                 DatePicker::make('data_nascimento')

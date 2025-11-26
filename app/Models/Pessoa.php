@@ -13,6 +13,7 @@ class Pessoa extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'cliente_id',
         'nome',
         'data_nascimento',
         'sexo',
