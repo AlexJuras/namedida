@@ -13,21 +13,56 @@ class RoupaForm
     {
         return $schema
             ->components([
+                TextInput::make('codigo')
+                    ->label('Código')
+                    ->required()
+                    ->numeric()
+                    ->unique(ignoreRecord: true)
+                    ->maxLength(20),
+                
                 TextInput::make('tipo')
-                    ->required(),
+                    ->label('Tipo')
+                    ->required()
+                    ->maxLength(255),
+                
                 TextInput::make('tamanho')
-                    ->required(),
-                TextInput::make('cor'),
-                TextInput::make('material'),
-                TextInput::make('marca'),
+                    ->label('Tamanho')
+                    ->required()
+                    ->maxLength(255),
+                
+                TextInput::make('cor')
+                    ->label('Cor')
+                    ->maxLength(255),
+                
+                TextInput::make('material')
+                    ->label('Material')
+                    ->maxLength(255),
+                
+                TextInput::make('marca')
+                    ->label('Marca')
+                    ->maxLength(255),
+                
                 TextInput::make('preco')
-                    ->numeric(),
+                    ->label('Preço')
+                    ->numeric()
+                    ->prefix('R$')
+                    ->step(0.01),
+                
                 Select::make('estado')
-                    ->options(['disponivel' => 'Disponivel', 'alugada' => 'Alugada', 'manutencao' => 'Manutencao'])
+                    ->label('Estado')
+                    ->options([
+                        'disponivel' => 'Disponível', 
+                        'alugada' => 'Alugada', 
+                        'manutencao' => 'Manutenção'
+                    ])
                     ->default('disponivel')
                     ->required(),
+                
                 Textarea::make('observacoes')
+                    ->label('Observações')
+                    ->rows(3)
                     ->columnSpanFull(),
-            ]);
+            ])
+            ->columns(2);
     }
 }
