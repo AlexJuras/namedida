@@ -19,6 +19,7 @@ class PessoaFactory extends Factory
         $sexo = $this->faker->randomElement(['masculino', 'feminino', null]);
         
         return [
+            'cliente_id' => \App\Models\Cliente::factory(),
             'nome' => $this->faker->name(),
             'data_nascimento' => $this->faker->date('Y-m-d', '-18 years'),
             'sexo' => $sexo,
