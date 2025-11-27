@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Fita métrica -->
+  <path d="M10 30 Q50 10, 90 30 T170 30" stroke="#F59E0B" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M10 30 Q50 10, 90 30 T170 30" stroke="#FCD34D" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Marcações da fita -->
+  <line x1="30" y1="22" x2="30" y2="26" stroke="#78350F" stroke-width="2"/>
+  <line x1="50" y1="15" x2="50" y2="19" stroke="#78350F" stroke-width="2"/>
+  <line x1="70" y1="22" x2="70" y2="26" stroke="#78350F" stroke-width="2"/>
+  <line x1="90" y1="30" x2="90" y2="34" stroke="#78350F" stroke-width="3" stroke-linecap="round"/>
+  <line x1="110" y1="22" x2="110" y2="26" stroke="#78350F" stroke-width="2"/>
+  <line x1="130" y1="15" x2="130" y2="19" stroke="#78350F" stroke-width="2"/>
+  <line x1="150" y1="22" x2="150" y2="26" stroke="#78350F" stroke-width="2"/>
+  
+  <!-- Números -->
+  <text x="90" y="48" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#78350F" text-anchor="middle">Na Medida</text>
+</svg>

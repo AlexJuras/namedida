@@ -34,6 +34,8 @@ class AdminPanelProvider extends PanelProvider
             ->emailVerification()
             ->emailChangeVerification()
             ->profile(EditProfile::class)
+            ->brandName('Na Medida')
+            ->favicon(asset('images/favicon.svg'))
             ->colors([
                 'primary' => Color::Amber,
             ])
@@ -45,7 +47,6 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
                 AccountWidget::class,
-                FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
