@@ -35,7 +35,9 @@ class AdminPanelProvider extends PanelProvider
             ->emailChangeVerification()
             ->profile(EditProfile::class)
             ->brandName('Na Medida')
-            ->favicon(asset('images/favicon.svg'))
+            // ->brandLogo('images/namedida.png')
+            // ->brandLogoHeight('5rem')
+            ->favicon(asset('images/logo.png'))
             ->colors([
                 'primary' => Color::Blue,
                 'danger' => Color::Red,
