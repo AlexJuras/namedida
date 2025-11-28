@@ -37,7 +37,9 @@ class AdminPanelProvider extends PanelProvider
             ->brandName('Na Medida')
             ->favicon(asset('images/favicon.svg'))
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Blue,
+                'danger' => Color::Red,
+                'success' => Color::Green
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')

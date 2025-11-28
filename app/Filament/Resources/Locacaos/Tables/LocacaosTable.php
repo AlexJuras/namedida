@@ -34,7 +34,14 @@ class LocacaosTable
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('estado')
-                    ->badge(),
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'ativa' => 'success',
+                        'atrasada' => 'danger',
+                        'concluida' => 'primary',
+                        default => 'secondary',
+                    }),
+
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

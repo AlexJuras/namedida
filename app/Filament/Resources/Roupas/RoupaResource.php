@@ -22,7 +22,7 @@ class RoupaResource extends Resource
 {
     protected static ?string $model = Roupa::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Scissors;
 
     public static function form(Schema $schema): Schema
     {
